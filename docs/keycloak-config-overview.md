@@ -73,14 +73,14 @@ Components that inject data into tokens - such as patient IDs, user resource IDs
 
 ## Quick Reference
 
-| Component | Purpose | Key Feature |
-|-----------|---------|-------------|
-| Server Config | Connection details | Admin credentials and URL |
-| Realm | Isolated environment | Contains all settings |
-| Client Scopes | Permission definitions | FHIR resource access levels |
-| Clients | Applications | OAuth 2.0 client settings |
-| Auth Flows | Login process | SMART with patient selection |
-| Events | Audit logging | Security compliance tracking |
+| Component     | Purpose                | Key Feature                  |
+| ------------- | ---------------------- | ---------------------------- |
+| Server Config | Connection details     | Admin credentials and URL    |
+| Realm         | Isolated environment   | Contains all settings        |
+| Client Scopes | Permission definitions | FHIR resource access levels  |
+| Clients       | Applications           | OAuth 2.0 client settings    |
+| Auth Flows    | Login process          | SMART with patient selection |
+| Events        | Audit logging          | Security compliance tracking |
 
 ## Next Steps
 

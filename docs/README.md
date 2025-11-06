@@ -231,19 +231,19 @@ graph TB
 
 ## Glossary
 
-| Term | Definition |
-|------|------------|
-| **SMART on FHIR** | Standard for healthcare app authorization with patient context |
-| **Realm** | Isolated configuration space in Keycloak (like a tenant) |
-| **Client Scope** | OAuth 2.0 scope defining permissions and token claims |
-| **Client** | Application that authenticates through Keycloak |
-| **Protocol Mapper** | Component that adds claims to tokens |
-| **Authenticator** | Component that performs authentication logic |
-| **Patient Context** | Association of authorization with a specific patient |
-| **Audience Claim** | Token claim identifying the intended recipient (FHIR server) |
-| **Access Token** | Short-lived token for API access |
-| **Refresh Token** | Long-lived token to obtain new access tokens |
-| **ID Token** | Token containing user identity information |
+| Term                | Definition                                                     |
+| ------------------- | -------------------------------------------------------------- |
+| **SMART on FHIR**   | Standard for healthcare app authorization with patient context |
+| **Realm**           | Isolated configuration space in Keycloak (like a tenant)       |
+| **Client Scope**    | OAuth 2.0 scope defining permissions and token claims          |
+| **Client**          | Application that authenticates through Keycloak                |
+| **Protocol Mapper** | Component that adds claims to tokens                           |
+| **Authenticator**   | Component that performs authentication logic                   |
+| **Patient Context** | Association of authorization with a specific patient           |
+| **Audience Claim**  | Token claim identifying the intended recipient (FHIR server)   |
+| **Access Token**    | Short-lived token for API access                               |
+| **Refresh Token**   | Long-lived token to obtain new access tokens                   |
+| **ID Token**        | Token containing user identity information                     |
 
 ## Version Information
 
@@ -271,9 +271,9 @@ For questions or issues:
 
 ## Change Log
 
-| Date | Document | Changes |
-|------|----------|---------|
-| 2025-11-06 | All | Initial documentation creation with Mermaid diagrams |
+| Date       | Document | Changes                                              |
+| ---------- | -------- | ---------------------------------------------------- |
+| 2025-11-06 | All      | Initial documentation creation with Mermaid diagrams |
 
 ## Next Steps
 

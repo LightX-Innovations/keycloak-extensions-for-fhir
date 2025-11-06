@@ -191,11 +191,11 @@ flowchart LR
 
 **Rule translation:**
 
-| Scope | Generated Rule | Effect |
-|-------|---------------|--------|
+| Scope                      | Generated Rule                                                                      | Effect                                  |
+| -------------------------- | ----------------------------------------------------------------------------------- | --------------------------------------- |
 | `patient/Observation.read` | `allow().read().resourcesOfType("Observation").inCompartment("Patient", patientId)` | Can GET `/Observation` for this patient |
-| `patient/Condition.read` | `allow().read().resourcesOfType("Condition").inCompartment("Patient", patientId)` | Can GET `/Condition` for this patient |
-| (no matching scope) | `denyAll()` | Everything else is forbidden |
+| `patient/Condition.read`   | `allow().read().resourcesOfType("Condition").inCompartment("Patient", patientId)`   | Can GET `/Condition` for this patient   |
+| (no matching scope)        | `denyAll()`                                                                         | Everything else is forbidden            |
 
 #### Step 7: Execute Query with Authorization
 
@@ -546,14 +546,14 @@ AND patient = Patient/456
 
 **Access Matrix:**
 
-| Request | Scope Required | Has Scope? | Result |
-|---------|---------------|------------|--------|
-| `GET /Observation` | `patient/Observation.read` | ✅ Yes | 200 OK - Returns data |
-| `GET /Condition` | `patient/Condition.read` | ✅ Yes | 200 OK - Returns data |
-| `GET /MedicationRequest` | `patient/MedicationRequest.read` | ✅ Yes | 200 OK - Returns data |
-| `GET /AllergyIntolerance` | `patient/AllergyIntolerance.read` | ❌ No | 403 Forbidden |
-| `GET /Procedure` | `patient/Procedure.read` | ❌ No | 403 Forbidden |
-| `POST /Observation` | `patient/Observation.write` | ❌ No | 403 Forbidden |
+| Request                   | Scope Required                    | Has Scope? | Result                |
+| ------------------------- | --------------------------------- | ---------- | --------------------- |
+| `GET /Observation`        | `patient/Observation.read`        | ✅ Yes      | 200 OK - Returns data |
+| `GET /Condition`          | `patient/Condition.read`          | ✅ Yes      | 200 OK - Returns data |
+| `GET /MedicationRequest`  | `patient/MedicationRequest.read`  | ✅ Yes      | 200 OK - Returns data |
+| `GET /AllergyIntolerance` | `patient/AllergyIntolerance.read` | ❌ No       | 403 Forbidden         |
+| `GET /Procedure`          | `patient/Procedure.read`          | ❌ No       | 403 Forbidden         |
+| `POST /Observation`       | `patient/Observation.write`       | ❌ No       | 403 Forbidden         |
 
 ## Configuration in Your Environment
 
@@ -820,16 +820,16 @@ server.registerInterceptor(authorizationInterceptor);
 
 ### What Happens Automatically ✨
 
-| Step | HAPI FHIR Starter Handles | You Configure |
-|------|---------------------------|---------------|
-| 1. Token validation | ✅ Automatic | Keycloak URL |
-| 2. Signature verification | ✅ Automatic | JWK Set URI |
-| 3. Expiration check | ✅ Automatic | Nothing |
-| 4. Audience validation | ✅ Automatic | Server URL |
-| 5. Scope parsing | ✅ Automatic | Nothing |
-| 6. Authorization rules | ✅ Automatic | Enable SMART mode |
-| 7. Patient filtering | ✅ Automatic | Enable compartments |
-| 8. Error responses | ✅ Automatic | Nothing |
+| Step                      | HAPI FHIR Starter Handles | You Configure       |
+| ------------------------- | ------------------------- | ------------------- |
+| 1. Token validation       | ✅ Automatic               | Keycloak URL        |
+| 2. Signature verification | ✅ Automatic               | JWK Set URI         |
+| 3. Expiration check       | ✅ Automatic               | Nothing             |
+| 4. Audience validation    | ✅ Automatic               | Server URL          |
+| 5. Scope parsing          | ✅ Automatic               | Nothing             |
+| 6. Authorization rules    | ✅ Automatic               | Enable SMART mode   |
+| 7. Patient filtering      | ✅ Automatic               | Enable compartments |
+| 8. Error responses        | ✅ Automatic               | Nothing             |
 
 ### What You Need to Configure 🔧
 

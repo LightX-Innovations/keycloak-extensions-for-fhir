@@ -252,19 +252,19 @@ All resource scopes follow this pattern:
 
 ### Complete Resource Scope List
 
-| Category | Resource Scopes |
-|----------|----------------|
-| **Allergies & Conditions** | `patient/AllergyIntolerance.read`, `patient/Condition.read` |
-| **Medications** | `patient/Medication.read`, `patient/MedicationRequest.read` |
-| **Care Plans** | `patient/CarePlan.read`, `patient/CareTeam.read`, `patient/Goal.read` |
-| **Clinical Data** | `patient/Observation.read`, `patient/DiagnosticReport.read`, `patient/Procedure.read` |
-| **Encounters** | `patient/Encounter.read`, `patient/Location.read` |
-| **Documents** | `patient/DocumentReference.read`, `patient/Provenance.read` |
-| **Patient Info** | `patient/Patient.read`, `patient/RelatedPerson.read` |
-| **Care Providers** | `patient/Practitioner.read`, `patient/PractitionerRole.read`, `patient/Organization.read` |
-| **Devices** | `patient/Device.read` |
-| **Immunizations** | `patient/Immunization.read` |
-| **Financial** | `patient/ExplanationOfBenefit.read` |
+| Category                   | Resource Scopes                                                                           |
+| -------------------------- | ----------------------------------------------------------------------------------------- |
+| **Allergies & Conditions** | `patient/AllergyIntolerance.read`, `patient/Condition.read`                               |
+| **Medications**            | `patient/Medication.read`, `patient/MedicationRequest.read`                               |
+| **Care Plans**             | `patient/CarePlan.read`, `patient/CareTeam.read`, `patient/Goal.read`                     |
+| **Clinical Data**          | `patient/Observation.read`, `patient/DiagnosticReport.read`, `patient/Procedure.read`     |
+| **Encounters**             | `patient/Encounter.read`, `patient/Location.read`                                         |
+| **Documents**              | `patient/DocumentReference.read`, `patient/Provenance.read`                               |
+| **Patient Info**           | `patient/Patient.read`, `patient/RelatedPerson.read`                                      |
+| **Care Providers**         | `patient/Practitioner.read`, `patient/PractitionerRole.read`, `patient/Organization.read` |
+| **Devices**                | `patient/Device.read`                                                                     |
+| **Immunizations**          | `patient/Immunization.read`                                                               |
+| **Financial**              | `patient/ExplanationOfBenefit.read`                                                       |
 
 **Total**: 25 granular resource scopes defined.
 
@@ -395,12 +395,12 @@ sequenceDiagram
 
 ## Token Claim Mapping Summary
 
-| Scope | Mapper | Claim Name | Token Type | Source |
-|-------|--------|------------|------------|--------|
-| `fhirUser` | fhirUser Mapper | `fhirUser` | ID Token, UserInfo | User attribute `resourceId` |
-| `launch/patient` | Patient ID Mapper | `patient_id` | Access Token | User attribute `resourceId` |
-| `launch/patient` | Group Membership Mapper | `group` | All tokens | User groups |
-| All resource scopes | Audience Mapper | `aud` | Access Token | Scope config `included.custom.audience` |
+| Scope               | Mapper                  | Claim Name   | Token Type         | Source                                  |
+| ------------------- | ----------------------- | ------------ | ------------------ | --------------------------------------- |
+| `fhirUser`          | fhirUser Mapper         | `fhirUser`   | ID Token, UserInfo | User attribute `resourceId`             |
+| `launch/patient`    | Patient ID Mapper       | `patient_id` | Access Token       | User attribute `resourceId`             |
+| `launch/patient`    | Group Membership Mapper | `group`      | All tokens         | User groups                             |
+| All resource scopes | Audience Mapper         | `aud`        | Access Token       | Scope config `included.custom.audience` |
 
 ## Best Practices
 

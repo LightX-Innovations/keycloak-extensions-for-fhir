@@ -50,12 +50,12 @@ Located at the root `keycloak` object level.
 
 ### Properties
 
-| Property | Type | Purpose | Example |
-|----------|------|---------|---------|
-| `serverUrl` | String | Keycloak server base URL | `http://localhost:55095/auth` |
-| `adminUser` | String | Administrator username | `admin` |
-| `adminPassword` | String | Administrator password | `admin` |
-| `adminClientId` | String | Admin CLI client identifier | `admin-cli` |
+| Property        | Type   | Purpose                     | Example                       |
+| --------------- | ------ | --------------------------- | ----------------------------- |
+| `serverUrl`     | String | Keycloak server base URL    | `http://localhost:55095/auth` |
+| `adminUser`     | String | Administrator username      | `admin`                       |
+| `adminPassword` | String | Administrator password      | `admin`                       |
+| `adminClientId` | String | Admin CLI client identifier | `admin-cli`                   |
 
 ### Usage
 
@@ -162,16 +162,16 @@ Defines applications that can authenticate through Keycloak.
 
 ### Client Properties Explained
 
-| Property | Value | Meaning |
-|----------|-------|---------|
-| `consentRequired` | `true` | User must explicitly consent to requested scopes |
-| `publicClient` | `true` | No client secret required - for browser/mobile apps |
-| `bearerOnly` | `false` | Can initiate login flows - not just validate tokens |
-| `enableDirectAccess` | `false` | Password grant disabled - forces proper OAuth flow |
-| `redirectURIs` | Array | Allowed redirect URLs after authentication |
-| `webOrigins` | Array | Allowed CORS origins for JavaScript clients |
-| `defaultClientScopes` | Array | Scopes automatically included in requests |
-| `optionalClientScopes` | Array | Scopes user can choose to grant |
+| Property               | Value   | Meaning                                             |
+| ---------------------- | ------- | --------------------------------------------------- |
+| `consentRequired`      | `true`  | User must explicitly consent to requested scopes    |
+| `publicClient`         | `true`  | No client secret required - for browser/mobile apps |
+| `bearerOnly`           | `false` | Can initiate login flows - not just validate tokens |
+| `enableDirectAccess`   | `false` | Password grant disabled - forces proper OAuth flow  |
+| `redirectURIs`         | Array   | Allowed redirect URLs after authentication          |
+| `webOrigins`           | Array   | Allowed CORS origins for JavaScript clients         |
+| `defaultClientScopes`  | Array   | Scopes automatically included in requests           |
+| `optionalClientScopes` | Array   | Scopes user can choose to grant                     |
 
 ## Authentication Flows Section
 

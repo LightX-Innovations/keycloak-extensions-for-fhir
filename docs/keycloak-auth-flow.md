@@ -254,12 +254,12 @@ After successful authentication and patient selection, Keycloak generates tokens
 
 ### Claims Added by Mappers
 
-| Claim | Source | Mapper | Token Type |
-|-------|--------|--------|------------|
-| `patient_id` | User attribute `resourceId` | Patient ID Mapper | Access Token |
-| `fhirUser` | User attribute `resourceId` | fhirUser Mapper | ID Token, UserInfo |
-| `group` | User groups | Group Membership Mapper | All Tokens |
-| `aud` | Client scope config | Audience Mapper | Access Token |
+| Claim        | Source                      | Mapper                  | Token Type         |
+| ------------ | --------------------------- | ----------------------- | ------------------ |
+| `patient_id` | User attribute `resourceId` | Patient ID Mapper       | Access Token       |
+| `fhirUser`   | User attribute `resourceId` | fhirUser Mapper         | ID Token, UserInfo |
+| `group`      | User groups                 | Group Membership Mapper | All Tokens         |
+| `aud`        | Client scope config         | Audience Mapper         | Access Token       |
 
 ## Flow Execution Requirements
 
@@ -307,12 +307,12 @@ stateDiagram-v2
 
 ## Requirement Types Explained
 
-| Requirement | Behavior |
-|-------------|----------|
-| `REQUIRED` | Must succeed for authentication to continue |
+| Requirement   | Behavior                                        |
+| ------------- | ----------------------------------------------- |
+| `REQUIRED`    | Must succeed for authentication to continue     |
 | `ALTERNATIVE` | At least one alternative execution must succeed |
-| `DISABLED` | Skipped during authentication |
-| `CONDITIONAL` | Executed based on conditions |
+| `DISABLED`    | Skipped during authentication                   |
+| `CONDITIONAL` | Executed based on conditions                    |
 
 ## Error Handling
 
